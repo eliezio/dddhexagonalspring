@@ -1,0 +1,7 @@
+{
+  "scopeList": [
+    "release",                                                                                                                                                          
+    "core",                                                                                                                                                             
+    "build",                                                                                                                                                            
+  ]
+}
