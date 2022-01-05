@@ -4,7 +4,6 @@ services:
   order-mongo-database:
     image: mongo:3.4.13
     container_name: order-mongo-db
-    restart: always
     ports:
       - 27017:27017
     environment:
@@ -16,7 +15,6 @@ services:
   order-cassandra-database:
     image: cassandra:3.11.5
     container_name: order-cassandra-db
-    restart: always
     ports: 
       - 9042:9042
   order-cassandra-init:
