@@ -31,6 +31,15 @@ dependencies {
     implementation("org.springframework.boot", "spring-boot-starter-data-cassandra")
 
     testImplementation("org.springframework.boot", "spring-boot-starter-test")
+
+    modules {
+        module("org.json:json") {
+            replacedBy(
+                "com.vaadin.external.google:android-json",
+                "org.json is seen as NON-FREE library. See https://wiki.debian.org/qa.debian.org/jsonevil"
+            )
+        }
+    }
 }
 
 tasks.test {
