@@ -17,6 +17,7 @@ import com.baeldung.dddhexagonalspring.domain.Order;
 import com.baeldung.dddhexagonalspring.domain.Product;
 import com.baeldung.dddhexagonalspring.domain.repository.OrderRepository;
 import com.baeldung.dddhexagonalspring.infrastracture.repository.mongo.SpringDataMongoOrderRepository;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 /*
  To run this test we need to run the databases first.
@@ -26,7 +27,8 @@ import com.baeldung.dddhexagonalspring.infrastracture.repository.mongo.SpringDat
 @SpringJUnitConfig
 @SpringBootTest
 @TestPropertySource("classpath:ddd-layers-test.properties")
-class MongoDbOrderRepositoryLiveTest {
+@Testcontainers
+class MongoDbOrderRepositoryLiveTest extends BaseLiveTest {
 
     @Autowired
     private SpringDataMongoOrderRepository mongoOrderRepository;

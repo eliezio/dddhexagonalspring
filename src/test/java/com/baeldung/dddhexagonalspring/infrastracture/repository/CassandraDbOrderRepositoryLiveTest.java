@@ -17,6 +17,7 @@ import com.baeldung.dddhexagonalspring.domain.Order;
 import com.baeldung.dddhexagonalspring.domain.Product;
 import com.baeldung.dddhexagonalspring.domain.repository.OrderRepository;
 import com.baeldung.dddhexagonalspring.infrastracture.repository.cassandra.SpringDataCassandraOrderRepository;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 /*
  To run this test we need to run the databases first.
@@ -26,7 +27,8 @@ import com.baeldung.dddhexagonalspring.infrastracture.repository.cassandra.Sprin
 @SpringJUnitConfig
 @SpringBootTest
 @TestPropertySource("classpath:ddd-layers-test.properties")
-class CassandraDbOrderRepositoryLiveTest {
+@Testcontainers
+class CassandraDbOrderRepositoryLiveTest extends BaseLiveTest {
 
     @Autowired
     private SpringDataCassandraOrderRepository cassandraOrderRepository;
