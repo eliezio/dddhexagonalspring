@@ -1,9 +1,9 @@
-package com.baeldung.dddhexagonalspring.infrastracture.configuration;
+package com.baeldung.dddhexagonalspring.infrastracture.repository.cassandra;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
-import com.baeldung.dddhexagonalspring.infrastracture.repository.cassandra.SpringDataCassandraOrderRepository;
-
+@Configuration
 @EnableCassandraRepositories(basePackageClasses = SpringDataCassandraOrderRepository.class)
 public class CassandraConfiguration {
 

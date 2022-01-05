@@ -1,16 +1,18 @@
-package com.baeldung.dddhexagonalspring;
+package com.baeldung.dddhexagonalspring.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.PropertySource;
 
 import com.baeldung.dddhexagonalspring.application.cli.CliOrderController;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {
+        "com.baeldung.dddhexagonalspring.infrastracture",
+        "com.baeldung.dddhexagonalspring.application",
+})
 @PropertySource(value = { "classpath:ddd-layers.properties" })
 public class DomainLayerApplication implements CommandLineRunner {
 

@@ -6,10 +6,12 @@ import java.math.BigDecimal;
 import java.util.Optional;
 import java.util.UUID;
 
+import com.baeldung.dddhexagonalspring.application.DomainLayerApplication;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
@@ -25,6 +27,7 @@ import com.baeldung.dddhexagonalspring.infrastracture.repository.mongo.SpringDat
  */
 @SpringJUnitConfig
 @SpringBootTest
+@ContextConfiguration(classes = DomainLayerApplication.class)
 @TestPropertySource("classpath:ddd-layers-test.properties")
 class MongoDbOrderRepositoryLiveTest {
 

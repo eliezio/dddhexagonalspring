@@ -16,7 +16,7 @@ java {
 }
 
 application {
-    mainClass.set("com.baeldung.dddhexagonalspring.DomainLayerApplication")
+    mainClass.set("com.baeldung.dddhexagonalspring.application.DomainLayerApplication")
 }
 
 repositories {
@@ -29,6 +29,8 @@ dependencies {
     implementation("org.springframework.boot", "spring-boot-starter-validation")
     implementation("org.springframework.boot", "spring-boot-starter-data-mongodb")
     implementation("org.springframework.boot", "spring-boot-starter-data-cassandra")
+
+    testImplementation("com.tngtech.archunit:archunit-junit5:0.22.0")
 
     testImplementation("org.springframework.boot", "spring-boot-starter-test")
 

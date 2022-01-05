@@ -1,9 +1,9 @@
-package com.baeldung.dddhexagonalspring.infrastracture.configuration;
+package com.baeldung.dddhexagonalspring.infrastracture.repository.mongo;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.baeldung.dddhexagonalspring.infrastracture.repository.mongo.SpringDataMongoOrderRepository;
-
+@Configuration
 @EnableMongoRepositories(basePackageClasses = SpringDataMongoOrderRepository.class)
 public class MongoDBConfiguration {
 }
